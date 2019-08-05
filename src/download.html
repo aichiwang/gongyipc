@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+		<title>关于我们</title>
+		<link rel="stylesheet" href="res/css/download.css">
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="header">
+				<img src="res/img/static/logo.jpg" />
+				<div class="list">
+					<a href="#" class="cur">首页</a>
+					<a href="#">关于我们</a>
+					<a href="#">我要查询</a>
+					<a href="#">合作高校</a>
+					<a href="#">下载中心</a>
+					<a href="#">招聘信息</a>
+					<a href="#">中国扶贫基金会</a>
+				</div>
+				<div class="login">登录</div>
+			</div>
+			<div class="content">
+				<div class="dlWrap">
+					<div class="tip">（文件大小限制20MB）</div>
+					<p class="cur">
+						<span>关于表彰2018年善行100·温暖行动优秀团队和个人的通报</span>
+						<i>下载</i>
+					</p>
+					<p>
+						<span>关于表彰2018年善行100·温暖行动优秀团队</span>
+						<i>下载</i>
+					</p>
+					<p>
+						<span>关于表彰2018年善行100·温暖行动优秀团队</span>
+						<i>下载</i>
+					</p>
+					<p>
+						<span>2018公益未来第二季度进展报告</span>
+						<i>下载</i>
+					</p>
+					<p>
+						<span>2018公益未来第二季度进展报告</span>
+						<i>下载</i>
+					</p>
+				</div>
+			</div>
+			<div class="bottom">
+				<img src="res/img/static/code2.jpeg" />
+				<div class="connect">
+					<p>地址 : 北京市海淀区双榆树西里36号南楼</p>
+					<p>邮编 : 100086</p>
+					<p>联系方式 : 010-82872688-263</p>
+				</div>
+				<div class="right">
+					<p>版权所有 COPYRIGHT @ 2018 中国扶贫基金会 保留所有权利</p>
+					<p>京公网安备11010802021291号</p>
+					<p>京公网安备11010802021291号</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Dom Content End -->
+	</body>
+	<script src="res/libs/jquery/jquery.min.js"></script>
+	<script>
+
+		$(function() {
+			Init();
+
+			function Init() {
+				events();
+			}
+
+			function events() {
+
+				$('.toCenter').click(function() {
+					location.href = 'center.html';
+				})
+				$('.aboutWrap .til span').on('click',function(){
+					$(this).addClass('cur').siblings().removeClass('cur');
+					$('.aboutDetail>div').eq($(this).index()).show().siblings().hide();
+				})
+				$('.openInfo .left p').click(function(){
+					$(this).addClass('cur').siblings().removeClass('cur');
+				})
+			}
+		})
+	</script>
+
+</html>

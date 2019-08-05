@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+		<title>合作高校</title>
+		<link rel="stylesheet" href="res/css/school.css">
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="header">
+				<img src="res/img/static/logo.jpg" />
+				<div class="list">
+					<a href="#" class="cur">首页</a>
+					<a href="#">关于我们</a>
+					<a href="#">我要查询</a>
+					<a href="#">合作高校</a>
+					<a href="#">下载中心</a>
+					<a href="#">招聘信息</a>
+					<a href="#">中国扶贫基金会</a>
+				</div>
+				<div class="login">登录</div>
+			</div>
+			<div class="content">
+				<div class="map">
+					<div class="mapDetail" id="china" style="width: 680px; height: 590px;"></div>
+					<div class="dataDetail">
+						<h5>内蒙古自治区</h5>
+						<div class="list">
+							<p class="title">
+								<span class="school">学校</span>
+								<span class="team">社团</span>
+								<span class="val">志愿者人数</span>
+							</p>
+							<p>
+								<span class="school">山东大学</span>
+								<span class="team">青年志愿者爱心社</span>
+								<span class="val">100</span>
+							</p>
+							<p>
+								<span class="school">山东大学</span>
+								<span class="team">青年志愿者爱心社</span>
+								<span class="val">100</span>
+							</p>
+							<p>
+								<span class="school">山东大学</span>
+								<span class="team">青年志愿者爱心社</span>
+								<span class="val">100</span>
+							</p>
+							<p>
+								<span class="school">山东大学</span>
+								<span class="team">青年志愿者爱心社</span>
+								<span class="val">100</span>
+							</p>
+						</div>
+						<div class="bottom">已有<i>800</i>个社团加入</div>
+					</div>
+				</div>
+				<div class="schoolShow">
+					<h5>合作高校</h5>
+					<p>公益善行早知道这里写一句介绍文字</p>
+					<div class="list">
+						<div class="item">
+							<img src="res/img/static/code.jpg"/>
+							<p>上海交通大学</p>
+						</div>
+						<div class="item">
+							<img src="res/img/static/code.jpg"/>
+							<p>上海交通大学</p>
+						</div>
+						<div class="item">
+							<img src="res/img/static/code.jpg"/>
+							<p>上海交通大学</p>
+						</div>
+						<div class="item">
+							<img src="res/img/static/code.jpg"/>
+							<p>上海交通大学</p>
+						</div>
+						<div class="item">
+							<img src="res/img/static/code.jpg"/>
+							<p>上海交通大学</p>
+						</div>
+						<div class="item">
+							<img src="res/img/static/code.jpg"/>
+							<p>上海交通大学</p>
+						</div>
+						<div class="item">
+							<img src="res/img/static/code.jpg"/>
+							<p>上海交通大学</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom">
+				<img src="res/img/static/code2.jpeg" />
+				<div class="connect">
+					<p>地址 : 北京市海淀区双榆树西里36号南楼</p>
+					<p>邮编 : 100086</p>
+					<p>联系方式 : 010-82872688-263</p>
+				</div>
+				<div class="right">
+					<p>版权所有 COPYRIGHT @ 2018 中国扶贫基金会 保留所有权利</p>
+					<p>京公网安备11010802021291号</p>
+					<p>京公网安备11010802021291号</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Dom Content End -->
+	</body>
+	<script src="res/libs/jquery/jquery.min.js"></script>
+	<script src="res/libs/echarts.js"></script>
+	<script src="res/libs/china.js"></script>
+	<script>
+		function randomData() {  
+		     return Math.round(Math.random()*500);  
+		}
+		var mydata = [  
+                {name: '北京',value: '100' },{name: '天津',value: randomData() },  
+                {name: '上海',value: randomData() },{name: '重庆',value: randomData() },  
+                {name: '河北',value: randomData() },{name: '河南',value: randomData() },  
+                {name: '云南',value: randomData() },{name: '辽宁',value: randomData() },  
+                {name: '黑龙江',value: randomData() },{name: '湖南',value: randomData() },  
+                {name: '安徽',value: randomData() },{name: '山东',value: randomData() },  
+                {name: '新疆',value: randomData() },{name: '江苏',value: randomData() },  
+                {name: '浙江',value: randomData() },{name: '江西',value: randomData() },  
+                {name: '湖北',value: randomData() },{name: '广西',value: randomData() },  
+                {name: '甘肃',value: randomData() },{name: '山西',value: randomData() },  
+                {name: '内蒙古',value: randomData() },{name: '陕西',value: randomData() },  
+                {name: '吉林',value: randomData() },{name: '福建',value: randomData() },  
+                {name: '贵州',value: randomData() },{name: '广东',value: randomData() },  
+                {name: '青海',value: randomData() },{name: '西藏',value: randomData() },  
+                {name: '四川',value: randomData() },{name: '宁夏',value: randomData() },  
+                {name: '海南',value: randomData() },{name: '台湾',value: randomData() },  
+                {name: '香港',value: randomData() },{name: '澳门',value: randomData() }  
+            ];
+        var optionMap = {  
+                backgroundColor: '#FFFFFF',  
+                title: {  
+                    text: '',  
+                    subtext: '',  
+                    x:'center'  
+                },  
+                tooltip : {  
+                    trigger: 'item'  
+                },  
+                
+                //左侧小导航图标
+//              visualMap: {  
+//                  show : true,  
+//                  x: 'left',  
+//                  y: 'center',  
+//                  splitList: [   
+//                      {start: 500, end:600},{start: 400, end: 500},  
+//                      {start: 300, end: 400},{start: 200, end: 300},  
+//                      {start: 100, end: 200},{start: 0, end: 100},  
+//                  ],  
+//                  color: ['#5475f5', '#9feaa5', '#85daef','#74e2ca', '#e6ac53', '#9fb5ea']  
+//              },  
+                
+                //配置属性
+                series: [{  
+                    name: '数据',  
+                    type: 'map',  
+                    mapType: 'china',   
+                    roam: true,  
+                    label: {  
+                        normal: {  
+                            show: true  //省份名称  
+                        },  
+                        emphasis: {  
+                            show: false  
+                        }  
+                    },  
+                    data:mydata  //数据
+                }]  
+            };  
+        //初始化echarts实例
+        var myChart = echarts.init(document.getElementById('china'));
+
+        //使用制定的配置项和数据显示图表
+        myChart.setOption(optionMap);
+
+		$(function() {
+			Init();
+
+			function Init() {
+				events();
+			}
+
+			function events() {
+
+				$('.toCenter').click(function() {
+					location.href = 'center.html';
+				})
+				$('.aboutWrap .til span').on('click',function(){
+					$(this).addClass('cur').siblings().removeClass('cur');
+					$('.aboutDetail>div').eq($(this).index()).show().siblings().hide();
+					if($(this).index() == 2){
+						baidumap();
+					}
+				})
+				$('.openInfo .left p').click(function(){
+					$(this).addClass('cur').siblings().removeClass('cur');
+				})
+			}
+		})
+	</script>
+
+</html>

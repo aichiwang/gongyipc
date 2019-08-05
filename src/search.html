@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+		<title>查询</title>
+		<link rel="stylesheet" href="res/css/search.css">
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="header">
+				<img src="res/img/static/logo.jpg" />
+				<div class="list">
+					<a href="#" class="cur">首页</a>
+					<a href="#">关于我们</a>
+					<a href="#">我要查询</a>
+					<a href="#">合作高校</a>
+					<a href="#">下载中心</a>
+					<a href="#">招聘信息</a>
+					<a href="#">中国扶贫基金会</a>
+				</div>
+				<div class="login">登录</div>
+			</div>
+			<div class="content">
+				<div class="search">
+					<div class="donation">
+						<p>捐赠查询</p>
+						<input type="text" placeholder="请输入订单编号"/>
+						<div class="searchBtn">查询</div>
+					</div>
+					<div class="certificate">
+						<p>捐赠查询</p>
+						<input type="text" placeholder="请输入证书编号"/>
+						<div class="searchBtn">查询</div>
+					</div>
+				</div>
+				<div class="result">
+					<div class="left">
+						<div class="til">
+							<span>学校</span>
+							<span>年级</span>
+							<span>姓名</span>
+						</div>
+						<div class="list">
+							<div>
+								<span>中国石油大学华东校区</span>
+								<span>大学2年级</span>
+								<span>李佩奇</span>
+							</div>
+							<div>
+								<span>中国石油大学华东校区</span>
+								<span>大学2年级</span>
+								<span>李佩奇</span>
+							</div>
+							<div>
+								<span>中国石油大学华东校区</span>
+								<span>大学2年级</span>
+								<span>李佩奇</span>
+							</div>
+							<div>
+								<span>中国石油大学华东校区</span>
+								<span>大学2年级</span>
+								<span>李佩奇</span>
+							</div>
+						</div>
+					</div>
+					<div class="right"></div>
+				</div>
+				<div class="liveScore">
+					<h5>实时捐赠</h5>
+					<p>· 李佩奇 <i> 捐赠 </i> 200元人民币</p>
+					<p>· 李佩奇 <i> 捐赠 </i> 200元人民币</p>
+					<p>· 李佩奇 <i> 捐赠 </i> 200元人民币</p>
+				</div>
+			</div>
+			<div class="bottom">
+				<img src="res/img/static/code2.jpeg" />
+				<div class="connect">
+					<p>地址 : 北京市海淀区双榆树西里36号南楼</p>
+					<p>邮编 : 100086</p>
+					<p>联系方式 : 010-82872688-263</p>
+				</div>
+				<div class="right">
+					<p>版权所有 COPYRIGHT @ 2018 中国扶贫基金会 保留所有权利</p>
+					<p>京公网安备11010802021291号</p>
+					<p>京公网安备11010802021291号</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Dom Content End -->
+	</body>
+	<script src="res/libs/jquery/jquery.min.js"></script>
+	<script>
+
+		$(function() {
+			Init();
+
+			function Init() {
+				events();
+			}
+
+			function events() {
+
+				$('.toCenter').click(function() {
+					location.href = 'center.html';
+				})
+				$('.aboutWrap .til span').on('click',function(){
+					$(this).addClass('cur').siblings().removeClass('cur');
+					$('.aboutDetail>div').eq($(this).index()).show().siblings().hide();
+					if($(this).index() == 2){
+						baidumap();
+					}
+				})
+				$('.openInfo .left p').click(function(){
+					$(this).addClass('cur').siblings().removeClass('cur');
+				})
+			}
+		})
+	</script>
+
+</html>

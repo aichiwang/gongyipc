@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+		<title>关于我们</title>
+		<link rel="stylesheet" href="res/css/about.css">
+		<script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=GSEFguWl1ckoW1wGEvknLKpUbdLmW7yx"></script>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="header">
+				<img src="res/img/static/logo.jpg" />
+				<div class="list">
+					<a href="#" class="cur">首页</a>
+					<a href="#">关于我们</a>
+					<a href="#">我要查询</a>
+					<a href="#">合作高校</a>
+					<a href="#">下载中心</a>
+					<a href="#">招聘信息</a>
+					<a href="#">中国扶贫基金会</a>
+				</div>
+				<div class="login">登录</div>
+			</div>
+			<div class="content">
+				<div class="aboutWrap">
+					<div class="til">
+						<span class="cur">基本信息</span>
+						<span>信息公开</span>
+						<span>联系我们</span>
+					</div>
+					<div class="aboutDetail">
+						<div class="baseInfo" >
+							<img src="res/img/static/logoBig.jpg" alt="" class="logo" />
+							<p>公益未来青年项目是由中国扶贫基金会于2013年发起的青年能力发展项目，旨在整合社会资源，支持高校公益社团发展，带动大学生参与公益，鼓励青年 人用创新的方式探索社会问题解决之道，使其成为富有创造力（Creativity）、团队协作能力（Teamwork）和社会责任感（Responsibility）的新一代青年，共创美好未来。</p>
+							<h5>公益青年学院</h5>
+							<p>Charity Future Youth Academy</p>
+							<p>通过全国公益社团领袖训练、区域领袖训练、在线课程三个方面支持公益社团领袖、核心成员和热心公益非社团青年进行能力建设。</p>
+							<h5>公益创想基金</h5>
+							<p>Charity Future Seed Fund</p>
+							<p>支持公益社团及青年人针对现今社会问题设计出有创意、影响力和可行的解决方案，范围包括：教育公平、环境保护、公益倡导、养老等，针对方案的预算，提供一定资金支持实施落地。</p>
+							<h5>公益青年X实践行动</h5>
+							<p>Charity Future Youth X practical activity</p>
+							<p>提供给公益社团一套完善的项目运营模式，从人员招募、培训、现场组织、财务管理、相关方协调等全流程体验，如善行100、花旗金融素质教育项目、箭牌垃圾投进趣项目、SAP青年责任梦想+项目。</p>
+							<img src="res/img/static/code.jpg" class="code" />
+						</div>
+						<div class="openInfo" style="display: none;">
+							<div class="left">
+								<p class="cur">中国扶贫基金会年度报告</p>
+								<p>善行100项目报告</p>
+								<p>表彰信息</p>
+							</div>
+							<div class="right">
+								<div class="item">
+									<img src="res/img/static/1.jpg" />
+									<p>扶贫助学—山村之旅</p>
+								</div>
+								<div class="item">
+									<img src="res/img/static/1.jpg" />
+									<p>扶贫助学—山村之旅</p>
+								</div>
+								<div class="item">
+									<img src="res/img/static/1.jpg" />
+									<p>扶贫助学—山村之旅</p>
+								</div>
+								<div class="item">
+									<img src="res/img/static/1.jpg" />
+									<p>扶贫助学—山村之旅</p>
+								</div>
+								<div class="item">
+									<img src="res/img/static/1.jpg" />
+									<p>扶贫助学—山村之旅</p>
+								</div>
+							</div>
+						</div>
+						<div class="connectUs" style="display: none;">
+							<div id="map"></div>
+							<div class="connectDetails">
+								<p>地址：北京市海淀区双榆树西里36号南楼</p>
+								<p>联系人：朱超</p>
+								<p>电话：010-82872688转263</p>
+								<p>手机：18910552434</p>
+								<p>邮箱：zhuchao@fupin.org.cn</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom">
+				<img src="res/img/static/code2.jpeg" />
+				<div class="connect">
+					<p>地址 : 北京市海淀区双榆树西里36号南楼</p>
+					<p>邮编 : 100086</p>
+					<p>联系方式 : 010-82872688-263</p>
+				</div>
+				<div class="right">
+					<p>版权所有 COPYRIGHT @ 2018 中国扶贫基金会 保留所有权利</p>
+					<p>京公网安备11010802021291号</p>
+					<p>京公网安备11010802021291号</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Dom Content End -->
+	</body>
+	<script src="res/libs/jquery/jquery.min.js"></script>
+	<script>
+		function baidumap(){
+			// 百度地图API功能
+			var map = new BMap.Map("map");
+			var point = new BMap.Point(116.329922,39.97439);
+			map.centerAndZoom(point, 19);
+			var marker = new BMap.Marker(point);  // 创建标注
+			map.addOverlay(marker);              // 将标注添加到地图中
+		
+			var label = new BMap.Label("中国扶贫基金会",{offset:new BMap.Size(20,-10)});
+			marker.setLabel(label);
+			
+			var top_left_control = new BMap.ScaleControl({anchor: BMAP_ANCHOR_TOP_LEFT});// 左上角，添加比例尺
+			var top_left_navigation = new BMap.NavigationControl();  //左上角，添加默认缩放平移控件
+			//添加控件和比例尺
+			map.addControl(top_left_control);        
+			map.addControl(top_left_navigation);  
+		}
+
+		$(function() {
+			Init();
+
+			function Init() {
+				events();
+			}
+
+			function events() {
+
+				$('.toCenter').click(function() {
+					location.href = 'center.html';
+				})
+				$('.aboutWrap .til span').on('click',function(){
+					$(this).addClass('cur').siblings().removeClass('cur');
+					$('.aboutDetail>div').eq($(this).index()).show().siblings().hide();
+					if($(this).index() == 2){
+						baidumap();
+					}
+				})
+				$('.openInfo .left p').click(function(){
+					$(this).addClass('cur').siblings().removeClass('cur');
+				})
+			}
+		})
+	</script>
+
+</html>
