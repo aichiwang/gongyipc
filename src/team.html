@@ -28,27 +28,26 @@
 			<div class="content">
 				<div class="backBtn">返回</div>
 				<h5>社团注册</h5>
-				<input type="text" name="" id="" value="" placeholder="账号："/><br />
-				<input type="text" name="" id="" value="" placeholder="密码："/><br />
-				<input type="text" name="" id="" value="" placeholder="确认密码："/><br />
+				<input type="text" name="" id="count" value="" placeholder="账号："/><br />
+				<input type="text" name="" id="passWord" value="" placeholder="密码："/><br />
+				<input type="text" name="" id="passWord2" value="" placeholder="确认密码："/><br />
 				<div class="selectWrap area">
 					<span>地址</span>
 					<select name="" id="province_selector"></select>
 					<select name="" id="city_selector"></select>
-					<select name="" id="district_selector"></select>
+					<select name="" id="district_selector" style="width: 0;height: 0;margin: 0;padding: 0;"></select>
 					<!--<i class="arrow1"></i>
 					<i class="arrow2"></i>
 					<i class="arrow3"></i>-->
 				</div>
 				<div class="selectWrap">
 					<span>高校</span>
-					<select name="">
+					<select name="" id="school">
 						<option value=""></option>
 					</select><br />
 					<i class="arrow"></i>
 				</div>
-				<input type="text" name="" id="" value="" placeholder="社团名称："/><br />
-				
+				<input type="text" name="" id="teamName" value="" placeholder="社团名称："/><br />
 				<div class="subBtn">提交注册</div>
 			</div>
 			<div class="bottom">
@@ -82,19 +81,65 @@
 
 			function events() {
 
-				$('.toCenter').click(function() {
-					location.href = 'center.html';
-				})
-				$('.aboutWrap .til span').on('click',function(){
-					$(this).addClass('cur').siblings().removeClass('cur');
-					$('.aboutDetail>div').eq($(this).index()).show().siblings().hide();
-					if($(this).index() == 2){
-						baidumap();
+				$('.subBtn').click(function() {
+					var count = $('#count').val();
+					var passWord = $('#passWord').val();
+					var passWord2 = $('#passWord2').val();
+					var province = $('#province_selector').val();
+					var city = $('#city_selector').val();
+					var school = $('#school').val();
+					var teamName = $('#teamName').val();
+					
+					if(!count){
+						globalMes('请输入账号')
+					}else if(!passWord){
+						globalMes('请输入密码')
+					}else if(!passWord2){
+						globalMes('请确认密码')
+					}else if(province == '省'){
+						globalMes('请选择省')
+					}else if(city == '市'){
+						globalMes('请选择市')
+					}else if(!school){
+						globalMes('请选择高校')
+					}else if(!teamName){
+						globalMes('请输入社团名称')
+					}else{
+						$.ajax({
+							type:"post",
+							url:"http://shanxing100.fupin.org.cn/api/user/registe",
+							async:true,
+							dataType:'jsonp',
+							data:{
+								count: count,
+								password: passWord,
+								passWord2: passWord2,
+								province: province,
+								city: city,
+								school: school,
+								teamName: teamName
+							},
+							success: function(res){
+//								console.log(res)
+								if(res.code == 0){
+									globalMes('注册成功！',function(){
+										location.href = 'index.html?type=login'
+									})
+								}
+							}
+						});
 					}
 				})
-				$('.openInfo .left p').click(function(){
-					$(this).addClass('cur').siblings().removeClass('cur');
-				})
+			}
+			
+			function globalMes(txt,callback) {
+				$('body').append('<div class="globalmes">' + txt + '</div>')
+				setTimeout(function() {
+					$('.globalmes').remove();
+					if(callback){
+						callback();
+					}
+				}, 2000)
 			}
 		})
 	</script>

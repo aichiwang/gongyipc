@@ -399,7 +399,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="cover">
+		<div class="cover" style="display: none;">
 			<div class="login" style="display: none;">
 				<h5>账号登陆</h5>
 				<input type="text" name="" id="" value="" placeholder="请输入账号"/><br />
@@ -414,7 +414,7 @@
 					<span>注册新账号</span>
 				</div>
 			</div>
-			<div class="regist">
+			<div class="regist" style="display: none;">
 				<h5>账号注册</h5>
 				<p class="subTil">— 请选择注册类型 —</p>
 				<div class="teamRegist">志愿者注册</div>
@@ -446,6 +446,9 @@
 			Init();
 
 			function Init() {
+				if(getQueryString('type') == 'login'){
+					$('.cover').show().find('.login').show().siblings('.regist').hide();
+				}
 				events();
 			}
 
@@ -464,6 +467,12 @@
 				$('.openInfo .left p').click(function() {
 					$(this).addClass('cur').siblings().removeClass('cur');
 				})
+			}
+			
+			function getQueryString(name){
+			     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			     var r = window.location.search.substr(1).match(reg);
+			     if(r!=null)return  unescape(r[2]); return null;
 			}
 		})
 	</script>
