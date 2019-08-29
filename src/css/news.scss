@@ -59,52 +59,39 @@ input::-webkit-input-placeholder{
         }
     }
     .content{
-        min-height: 900px;
-        background: url(../img/static/bg.jpg) top no-repeat;
-        background-size: 100% 300px;
-        overflow: hidden;
-        .dlWrap{
-            position: relative;
-            width: 1200px;
-            margin: 280px auto 45px;
-            padding:100px 0 65px;
-            background: #fff;
-            box-shadow: 0 0 0.5rem #ddd;
-            .tip{
-                position: absolute;
-                top: 45px;
-                right: 80px;
+        width: 1110px;
+        margin: 0 auto 50px;
+        box-shadow: 0 0 25px #ddd;
+        min-height: 750px;
+        font-size: 18px;
+        padding: 60px 45px;
+        color: #444;
+        .til{
+            a{
+                font-size: 18px;
+                color: #444444;
+            }
+        }
+        .newsCon{
+            h5{
+                font-size: 26px;
+                font-weight: bold;
+                text-align: center;
+            }
+            .time{
+                font-size: 18px;
                 color: #a6a6a6;
+                text-align: center;
+                line-height: 70px;
             }
-            p{
-                position: relative;
-                height: 75px;
-                padding-left: 30px;
-                margin: 0 50px;
+            .detail{
                 font-size: 16px;
-                line-height: 75px;
-                cursor: pointer;
-                i{
-                    position: absolute;
-                    top: 20px;
-                    right: 30px;
-                    width: 102px;
-                    height: 40px;
-                    line-height: 40px;
-                    border-radius: 20px;
-                    text-align: center;
-                }
-            }
-            p:hover{
-                box-shadow: 0 0 0.5rem #ddd;
-                i{
-                    color: #fff;
-                    background: #F97B26;
-                }
+                line-height: 30px;
+                padding: 15px 0;
             }
         }
     }
-    .bottom{
+    >.bottom{
         height: 120px;
         background: #323232;
         text-align: center;
@@ -124,4 +111,3 @@ input::-webkit-input-placeholder{
         }
     }
 }
-

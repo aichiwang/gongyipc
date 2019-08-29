@@ -12,19 +12,7 @@
 
 	<body>
 		<div class="wrap">
-			<div class="header">
-				<img src="res/img/static/logo.jpg" />
-				<div class="list">
-					<a href="index.html">首页</a>
-					<a href="about.html">关于我们</a>
-					<a href="search.html">我要查询</a>
-					<a href="school.html">合作高校</a>
-					<a href="download.html">下载中心</a>
-					<a href="jobs.html">招聘信息</a>
-					<a href="http://www.fupin.org.cn/">中国扶贫基金会</a>
-				</div>
-				<div class="login">登录</div>
-			</div>
+			<include src="html/header.html"></include>
 			<div class="content">
 				<div class="backBtn">返回</div>
 				<h5>志愿者注册</h5>
@@ -41,24 +29,13 @@
 				<input type="text" name="" id="" value="" placeholder="再次输入密码："/><br />
 				<div class="subBtn">提交注册</div>
 			</div>
-			<div class="bottom">
-				<img src="res/img/static/code2.jpeg" />
-				<div class="connect">
-					<p>地址 : 北京市海淀区双榆树西里36号南楼</p>
-					<p>邮编 : 100086</p>
-					<p>联系方式 : 010-82872688-263</p>
-				</div>
-				<div class="right">
-					<p>版权所有 COPYRIGHT @ 2018 中国扶贫基金会 保留所有权利</p>
-					<p>京公网安备11010802021291号</p>
-					<p>京公网安备11010802021291号</p>
-				</div>
-			</div>
+			<include src="html/footer.html"></include>
 		</div>
-
+		<include src="html/login.html"></include>
 		<!-- Dom Content End -->
 	</body>
 	<script src="res/libs/jquery/jquery.min.js"></script>
+	<script src="res/libs/common.js"></script>
 	<script>
 
 		$(function() {

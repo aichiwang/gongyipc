@@ -6,7 +6,7 @@
 		<meta name="renderer" content="webkit">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
-		<title>关于我们</title>
+		<title>首页</title>
 		<link rel="stylesheet" type="text/css" href="res/libs/swiper/swiper.min.css" />
 		<link rel="stylesheet" href="res/css/index.css">
 		<script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=GSEFguWl1ckoW1wGEvknLKpUbdLmW7yx"></script>
@@ -14,20 +14,26 @@
 
 	<body>
 		<div class="wrap">
-			<div class="header">
-				<img src="res/img/static/logo.jpg" />
-				<div class="list">
-					<a href="index.html" class="cur">首页</a>
-					<a href="about.html">关于我们</a>
-					<a href="search.html">我要查询</a>
-					<a href="school.html">合作高校</a>
-					<a href="download.html">下载中心</a>
-					<a href="jobs.html">招聘信息</a>
-					<a href="http://www.fupin.org.cn/">中国扶贫基金会</a>
-				</div>
-				<div class="login">登录</div>
-			</div>
+			<include src="html/header.html"></include>
 			<div class="content">
+				<div class="swp">
+					<div class="swiper-container1">
+					    <div class="swiper-wrapper">
+					        <div class="swiper-slide">
+					        	<img src="res/img/static/elephent.jpg"/>
+					        </div>
+					        <div class="swiper-slide">
+					        	<img src="res/img/static/elephent.jpg"/>
+					        </div>
+					        <div class="swiper-slide">
+					        	<img src="res/img/static/elephent.jpg"/>
+					        </div>
+					    </div>
+					    <!-- 如果需要导航按钮 -->
+					    <div class="swiper-button-prev"></div>
+					    <div class="swiper-button-next"></div>
+					</div>
+				</div>
 				<div class="dataWrap">
 					<ul class="number">
 						<li>
@@ -61,7 +67,7 @@
 						<img src="res/img/static/tp.jpg" />
 						<p><a href="">·2018公益未来·同盾创想高校 行动家项目创想高校</a></p>
 						<div class="line"></div>
-						<a class="toSearch">我要查询</a>
+						<a class="toSearch" href="search.html">我要查询</a>
 					</div>
 					<div class="news-list clearfix">
 						<ul class="pull-left">
@@ -108,22 +114,22 @@
 						</div>
 						<div class="rank-content">
 							<div class="tab clearfix">
-								<a class="active" href="">
+								<a class="active" href="jsvascript:void(0);">
 									<p>总排名</p>
 								</a>
-								<a href="">
+								<a href="jsvascript:void(0);">
 									<p>周排名</p>
 								</a>
 							</div>
 							<div class="tab-content">
-								<ul class="" id="">
+								<ul class="totalRank" id="">
 									<li class="clearfix">
 										<p class="pull-left">TOP1 <span>李佳琦</span></p>
-										<p class="pull-right">四川大学 <span>3500元</span></p>
+										<p class="pull-right">四川大学 <span>1500元</span></p>
 									</li>
 									<li class="clearfix">
 										<p class="pull-left">TOP2 <span>李佳琦</span></p>
-										<p class="pull-right">四川大学 <span>3500元</span></p>
+										<p class="pull-right">四川大学 <span>1500元</span></p>
 									</li>
 									<li class="clearfix">
 										<p class="pull-left">TOP3 <span>李佳琦</span></p>
@@ -157,9 +163,50 @@
 										<p class="pull-left">TOP10<span>李佳琦</span></p>
 										<p class="pull-right">四川大学 <span>3500元</span></p>
 									</li>
-
 								</ul>
-
+								<ul class="weekRank" id="">
+									<li class="clearfix">
+										<p class="pull-left">TOP1 <span>李3佳琦</span></p>
+										<p class="pull-right">四川大学 <span>3500元</span></p>
+									</li>
+									<li class="clearfix">
+										<p class="pull-left">TOP2 <span>李4佳琦</span></p>
+										<p class="pull-right">四川大学 <span>3500元</span></p>
+									</li>
+									<li class="clearfix">
+										<p class="pull-left">TOP3 <span>李5佳琦</span></p>
+										<p class="pull-right">四川大学 <span>3500元</span></p>
+									</li>
+									<li class="clearfix">
+										<p class="pull-left">TOP4 <span>李佳琦</span></p>
+										<p class="pull-right">四川大学 <span>3500元</span></p>
+									</li>
+									<li class="clearfix">
+										<p class="pull-left">TOP5 <span>李佳琦</span></p>
+										<p class="pull-right">四川大学 <span>3500元</span></p>
+									</li>
+									<li class="clearfix">
+										<p class="pull-left">TOP6 <span>李佳琦</span></p>
+										<p class="pull-right">四川大学 <span>3500元</span></p>
+									</li>
+									<li class="clearfix">
+										<p class="pull-left">TOP7 <span>李佳琦</span></p>
+										<p class="pull-right">四川大学 <span>3500元</span></p>
+									</li>
+									<li class="clearfix">
+										<p class="pull-left">TOP8 <span>李佳琦</span></p>
+										<p class="pull-right">四川大学 <span>3500元</span></p>
+									</li>
+									<li class="clearfix">
+										<p class="pull-left">TOP9<span>李佳琦</span></p>
+										<p class="pull-right">四川大学 <span>3500元</span></p>
+									</li>
+									<li class="clearfix">
+										<p class="pull-left">TOP10<span>李佳琦</span></p>
+										<p class="pull-right">四川大学 <span>3500元</span></p>
+									</li>
+								</ul>
+								
 							</div>
 						</div>
 					</li>
@@ -170,25 +217,67 @@
 						</div>
 						<div class="rank-content">
 							<div class="tab clearfix">
-								<a class="active" href="">
+								<a class="active" href="jsvascript:void(0);">
 									<p>总排名</p>
 								</a>
-								<a href="">
+								<a href="jsvascript:void(0);">
 									<p>周排名</p>
 								</a>
 							</div>
 							<div class="tab-content">
-								<ul class="" id="">
+								<ul class="totalRank" id="">
 									<li class="clearfix">
 										<p class="pull-left">TOP1 <span>李佳琦</span></p>
-										<p class="pull-right">四川大学 <span>3500元</span></p>
+										<p class="pull-right">四川大学 <span>66500元</span></p>
 									</li>
 									<li class="clearfix">
 										<p class="pull-left">TOP2 <span>李佳琦</span></p>
-										<p class="pull-right">四川大学 <span>3500元</span></p>
+										<p class="pull-right">四川大学 <span>88500元</span></p>
 									</li>
 									<li class="clearfix">
 										<p class="pull-left">TOP3 <span>李佳琦</span></p>
+										<p class="pull-right">四川大学 <span>3500元</span></p>
+									</li>
+									<li class="clearfix">
+										<p class="pull-left">TOP4 <span>李佳琦</span></p>
+										<p class="pull-right">四川大学 <span>3500元</span></p>
+									</li>
+									<li class="clearfix">
+										<p class="pull-left">TOP5 <span>李佳琦</span></p>
+										<p class="pull-right">四川大学 <span>3500元</span></p>
+									</li>
+									<li class="clearfix">
+										<p class="pull-left">TOP6 <span>李佳琦</span></p>
+										<p class="pull-right">四川大学 <span>3500元</span></p>
+									</li>
+									<li class="clearfix">
+										<p class="pull-left">TOP7 <span>李佳琦</span></p>
+										<p class="pull-right">四川大学 <span>3500元</span></p>
+									</li>
+									<li class="clearfix">
+										<p class="pull-left">TOP8 <span>李佳琦</span></p>
+										<p class="pull-right">四川大学 <span>3500元</span></p>
+									</li>
+									<li class="clearfix">
+										<p class="pull-left">TOP9<span>李佳琦</span></p>
+										<p class="pull-right">四川大学 <span>3500元</span></p>
+									</li>
+									<li class="clearfix">
+										<p class="pull-left">TOP10<span>李佳琦</span></p>
+										<p class="pull-right">四川大学 <span>3500元</span></p>
+									</li>
+								</ul>
+								<ul class="weekRank" id="">
+									<li class="clearfix">
+										<p class="pull-left">TOP1 <span>李佳2琦</span></p>
+										<p class="pull-right">四川大学 <span>3500元</span></p>
+									</li>
+									<li class="clearfix">
+										<p class="pull-left">TOP2 <span>李佳2琦</span></p>
+										<p class="pull-right">四川大学 <span>3500元</span></p>
+									</li>
+									<li class="clearfix">
+										<p class="pull-left">TOP3 <span>李佳2琦</span></p>
 										<p class="pull-right">四川大学 <span>3500元</span></p>
 									</li>
 									<li class="clearfix">
@@ -286,10 +375,12 @@
 				</div>
 				<div class="lover">
 					<div class="lover-title">
-						<p><span class="title">爱心大使</span><span class="more">更多</span></p>
+						<p><span class="title">爱心大使</span>
+							<!--<span class="more">更多</span>-->
+						</p>
 						<p class="subtitle">公益善行早知道</p>
 					</div>
-					<div style="height:400px;">
+					<div style="height:440px;">
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
@@ -394,58 +485,29 @@
 						</li>
 					</ul>
 				</div>
-				<div class="bottom">
-					<img src="res/img/static/code2.jpeg" />
-					<div class="connect">
-						<p>地址 : 北京市海淀区双榆树西里36号南楼</p>
-						<p>邮编 : 100086</p>
-						<p>联系方式 : 010-82872688-263</p>
-					</div>
-					<div class="right">
-						<p>版权所有 COPYRIGHT @ 2018 中国扶贫基金会 保留所有权利</p>
-						<p>京公网安备11010802021291号</p>
-						<p>京公网安备11010802021291号</p>
-					</div>
-				</div>
+				<include src="html/footer.html"></include>
 			</div>
 		</div>
-		<div class="cover" style="display: none;">
-			<div class="login" style="display: none;">
-				<h5>账号登陆</h5>
-				<input type="text" name="" id="" value="" placeholder="请输入账号"/><br />
-				<input type="text" name="" id="" value="" placeholder="请输入密码"/><br />
-				<input type="text" name="" id="codeImg" value="" placeholder="请输入图形验证码"/>
-				<img class="mesCode" src="res/img/static/tp.jpg"/>
-				<div class="teamLogin">社团登录</div>
-				<div class="volunLogin">志愿者登录</div>
-				<p class="autoLogin"><input type="checkbox" name="" id="" value="" />下次自动登录</p>
-				<div class="loginBot">
-					<span>忘记密码</span>
-					<span>注册新账号</span>
-				</div>
-			</div>
-			<div class="regist" style="display: none;">
-				<h5>账号注册</h5>
-				<p class="subTil">— 请选择注册类型 —</p>
-				<div class="teamRegist">志愿者注册</div>
-				<div class="volunRegist">社团注册</div>
-				<div class="hasRegist">已有账号注册，前往登录</div>
-			</div>
-		</div>
+		<include src="html/login.html"></include>
 		<!-- Dom Content End -->
 	</body>
 	<script src="res/libs/jquery/jquery.min.js"></script>
 	<script src="res/libs/swiper/swiper.min.js"></script>
+	<script src="res/libs/common.js"></script>
 	<script>
-		var swiper = new Swiper('.swiper-container', {
-			slidesPerView: 3,
-			spaceBetween: 30,
+		var swiper = new Swiper('.swiper-container1', {
 			centeredSlides: true,
 			loop: true,
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
 			},
+		});
+		var swiper = new Swiper('.swiper-container', {
+			slidesPerView: 3,
+			spaceBetween: 55,
+			centeredSlides: true,
+			loop: true,
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',
@@ -464,18 +526,14 @@
 
 			function events() {
 
-				$('.toCenter').click(function() {
-					location.href = 'center.html';
+				$('.rank .tab a').click(function() {console.log($(this).index())
+					$(this).addClass('active').siblings().removeClass('active')
+					$(this).parents('.tab').siblings('.tab-content').find('ul').eq($(this).index()).show().siblings().hide()
 				})
-				$('.aboutWrap .til span').on('click', function() {
-					$(this).addClass('cur').siblings().removeClass('cur');
-					$('.aboutDetail>div').eq($(this).index()).show().siblings().hide();
-					if($(this).index() == 2) {
-						baidumap();
-					}
-				})
-				$('.openInfo .left p').click(function() {
-					$(this).addClass('cur').siblings().removeClass('cur');
+				
+				$('.star ul li').click(function(){
+					$(this).find('a').addClass('active');
+					$(this).siblings().find('a').removeClass('active');
 				})
 			}
 			

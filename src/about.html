@@ -13,19 +13,7 @@
 
 	<body>
 		<div class="wrap">
-			<div class="header">
-				<img src="res/img/static/logo.jpg" />
-				<div class="list">
-					<a href="index.html" >首页</a>
-					<a href="about.html" class="cur">关于我们</a>
-					<a href="search.html">我要查询</a>
-					<a href="school.html">合作高校</a>
-					<a href="download.html">下载中心</a>
-					<a href="jobs.html">招聘信息</a>
-					<a href="http://www.fupin.org.cn/">中国扶贫基金会</a>
-				</div>
-				<div class="login">登录</div>
-			</div>
+			<include src="html/header.html"></include>
 			<div class="content">
 				<div class="aboutWrap">
 					<div class="til">
@@ -35,7 +23,7 @@
 					</div>
 					<div class="aboutDetail">
 						<div class="baseInfo" >
-							<img src="res/img/static/logoBig.jpg" alt="" class="logo" />
+							<img src="res/img/static/logo.png"style="width:600px" alt="" class="logo" />
 							<p>公益未来青年项目是由中国扶贫基金会于2013年发起的青年能力发展项目，旨在整合社会资源，支持高校公益社团发展，带动大学生参与公益，鼓励青年 人用创新的方式探索社会问题解决之道，使其成为富有创造力（Creativity）、团队协作能力（Teamwork）和社会责任感（Responsibility）的新一代青年，共创美好未来。</p>
 							<h5>公益青年学院</h5>
 							<p>Charity Future Youth Academy</p>
@@ -90,24 +78,13 @@
 					</div>
 				</div>
 			</div>
-			<div class="bottom">
-				<img src="res/img/static/code2.jpeg" />
-				<div class="connect">
-					<p>地址 : 北京市海淀区双榆树西里36号南楼</p>
-					<p>邮编 : 100086</p>
-					<p>联系方式 : 010-82872688-263</p>
-				</div>
-				<div class="right">
-					<p>版权所有 COPYRIGHT @ 2018 中国扶贫基金会 保留所有权利</p>
-					<p>京公网安备11010802021291号</p>
-					<p>京公网安备11010802021291号</p>
-				</div>
-			</div>
+			<include src="html/footer.html"></include>
 		</div>
-
+		<include src="html/login.html"></include>
 		<!-- Dom Content End -->
 	</body>
 	<script src="res/libs/jquery/jquery.min.js"></script>
+	<script src="res/libs/common.js"></script>
 	<script>
 		function baidumap(){
 			// 百度地图API功能

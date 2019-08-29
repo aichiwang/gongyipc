@@ -1,5 +1,6 @@
 @charset"UTF-8";
 @import "common/common";
+//@import "component/headFooter";
 
 /*好友详情页*/
 
@@ -22,7 +23,8 @@ body {
         margin: 0 auto;
         img {
             float: left;
-            margin-top: 17px;
+            margin-top: 24px;
+            width: 273px;
         }
         .list {
             float: left;
@@ -58,13 +60,41 @@ body {
     }
     .content {
         min-height: 900px;
-        background: url(../img/static/elephent.jpg) top no-repeat;
-        background-size: 100% 500px;
+//      background: url(../img/static/elephent.jpg) top no-repeat;
+//      background-size: 100% 500px;
         overflow: hidden;
+        .swp{
+            background: #0E0E0E;
+            .swiper-container1{
+                margin: 0 auto;
+                width: 1200px;
+                overflow: hidden;
+                position: relative;
+                img{
+                    background: #0E0E0E;
+                }
+            }
+            .swiper-button-prev{
+                background: url(../img/static/swiperLeft.png);
+                background-size: contain;
+            }
+            .swiper-button-prev:hover{
+                background: url(../img/static/swiperLeft-h.png);
+                background-size: contain;
+            }
+            .swiper-button-next{
+                background: url(../img/static/swiperRight.png);
+                background-size: contain;
+            }
+            .swiper-button-next:hover{
+                background: url(../img/static/swiperRight-h.png);
+                background-size: cover;
+            }
+        }
         .dataWrap {
             width: 1200px;
             height: 120px;
-            margin: 480px auto 45px;
+            margin: 80px auto 45px;
             background: #fff;
             box-shadow: 0 0 0.5rem #ddd;
             .number {
@@ -233,6 +263,12 @@ body {
         }
         .tab-content {
             padding-bottom: 20px;
+            ul{
+                display: none;
+            }
+            .totalRank{
+                display: block;
+            }
             li {
                 width: 92%;
                 padding: 10px 20px;
@@ -331,6 +367,22 @@ body {
         .lover {
             width: 1200px;
             margin: 40px auto 0;
+            .swiper-button-prev{
+                background: url(../img/static/swiperLeft2.png);
+                background-size: contain;
+            }
+            .swiper-button-prev:hover{
+                background: url(../img/static/swiperLeft2-h.png);
+                background-size: contain;
+            }
+            .swiper-button-next{
+                background: url(../img/static/swiperRight2.png);
+                background-size: contain;
+            }
+            .swiper-button-next:hover{
+                background: url(../img/static/swiperRight2-h.png);
+                background-size: cover;
+            }
         }
         .lover-title{
             .title{
@@ -358,6 +410,7 @@ body {
         .swiper-container {
             width: 100%;
             height: 100%;
+            padding: 20px;
         }
         .swiper-slide {
             font-size: 18px;
@@ -367,6 +420,7 @@ body {
             box-shadow: 0 0 15px #ddd;
             img {
                 width: 100%;
+                height: 377px;
             }
         }
         .swiper-slide-active,
@@ -376,14 +430,26 @@ body {
         .slide-bottom {
             background: #fff;
             width: 100%;
+            height: 90px;
             position: absolute;
+            bottom: 0;
             img {
                 margin-top: 0px;
             }
             p {
-                padding: 5px 0;
                 text-align: center;
+                color: #acacac;
             }
+            p:first-child{
+                margin: 20px 0 5px;
+                color: #444444;
+            }
+        }
+        .swiper-button-next{
+            right: 0;
+        }
+        .swiper-button-prev{
+            left: 0;
         }
         .join {
             width: 1200px;
@@ -445,7 +511,14 @@ body {
     bottom: 0;
     right: 0;
     z-index: 1;
-    background: rgba(0, 0, 0, 0.7);
+    .bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+    }
     .login {
         position: absolute;
         top: 120px;
@@ -551,6 +624,9 @@ body {
             font-size: 22px;
             background: #F97B26;
             cursor: pointer;
+            a{
+                color: #F97B26;
+            }
         }
         .volunRegist{
             border: 1px solid #F97B26;
@@ -558,6 +634,12 @@ body {
             background: #fff;
             margin: 0 auto;
         }
+        .teamRegist{
+            a{
+                color: #fff;
+            }
+        }
+        
         .hasRegist{
             margin-top: 80px;
             font-size: 18px;

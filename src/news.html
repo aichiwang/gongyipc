@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+		<title>新闻</title>
+		<link rel="stylesheet" href="res/css/news.css">
+	</head>
+
+	<body>
+		<div class="wrap">
+			<include src="html/header.html"></include>
+			<div class="content">
+				<div class="til">
+					<a href="">项目新闻</a>&gt;
+					<a href="">新闻详情</a>
+				</div>
+				<div class="newsCon">
+					<h5>2018—2019年度公益未来，实时捐赠30强名单</h5>
+					<p class="time">发布时间：2019-08-28  14:00</p>
+					<p class="detail">　　启动仪式有体彩公益成就展及现场演出、公益捐赠三个环节。体彩公益成就展重点介绍了体育彩票公益金的使用情况以及电脑型体育彩票在安徽上市19年来，安徽省体彩中心开展的各项公益活动。截至2018年，体育彩票在安徽累计销售近547亿元，为国家募集公益金121亿元。这些资金除了用于全民健身和奥运争光计划，还广泛用于社会保障基金、红十字人道主义救助事业、教育助学、医疗卫生、残疾人救助、城镇和农村医疗救助基金、抗震救灾和灾区重建、基层文化建设、扶贫等社会公益事业。中国体育彩票是名副其实的国家公益彩票。</p>
+					<p class="detail">　　启动仪式有体彩公益成就展及现场演出、公益捐赠三个环节。体彩公益成就展重点介绍了体育彩票公益金的使用情况以及电脑型体育彩票在安徽上市19年来，安徽省体彩中心开展的各项公益活动。截至2018年，体育彩票在安徽累计销售近547亿元，为国家募集公益金121亿元。这些资金除了用于全民健身和奥运争光计划，还广泛用于社会保障基金、红十字人道主义救助事业、教育助学、医疗卫生、残疾人救助、城镇和农村医疗救助基金、抗震救灾和灾区重建、基层文化建设、扶贫等社会公益事业。中国体育彩票是名副其实的国家公益彩票。</p>
+					<p class="detail">　　在活动现场，合肥体彩公益联盟的代表上台，向合肥市炳辉社区的困难群众代表进行了爱心捐献。合肥体彩公益联盟是由体彩业主于2018年初自发成立，结合体彩公益主题开展了多次爱心活动，收到了很好的社会效益。</p>
+					<p class="detail">　　活动最吸引人气的是现场演出环节，可谓亮点纷呈：节目中不仅有歌舞表演、抖音互动舞表演教学，还穿插体彩公益金宣传、微信抽奖等内容。其中，“安徽省责任体彩标兵”许瑞兵来到现场与市民共同分享了公益感言。</p>
+					<p class="detail">　　现场还通过关注“体彩安徽”公众号参与抽奖活动的形式发放了大乐透玩法代金券，开展拉新活动，受到市民朋友的喜爱和关注，增强了对中国体育彩票品牌玩法的体验感。</p>
+					<p class="detail">　　为了扩大活动的影响力，让更多的力量汇聚到社会公益事业中来，安徽省体彩中心还邀请了安徽广播电视台“第一体育”“万家热线”等网络媒体对现场活动进行了现场直播。（转自8月28日《中国体育报》08版）</p>
+				</div>
+			</div>
+			<include src="html/footer.html"></include>
+		</div>
+		<include src="html/login.html"></include>
+		<!-- Dom Content End -->
+	</body>
+	<script src="res/libs/jquery/jquery.min.js"></script>
+	<script src="res/libs/common.js"></script>
+	<script>
+		$(function() {
+			Init();
+
+			function Init() {
+				events();
+			}
+
+			function events() {
+
+				$('.toCenter').click(function() {
+					location.href = 'center.html';
+				})
+				$('.aboutWrap .til span').on('click', function() {
+					$(this).addClass('cur').siblings().removeClass('cur');
+					$('.aboutDetail>div').eq($(this).index()).show().siblings().hide();
+					if($(this).index() == 2) {
+						baidumap();
+					}
+				})
+				$('.openInfo .left p').click(function() {
+					$(this).addClass('cur').siblings().removeClass('cur');
+				})
+			}
+		})
+	</script>
+
+</html>
