@@ -88,10 +88,10 @@
 							</div>
 						</div>
 						<div class="trainee position" style="display: none;">
-							
+							实习生招聘
 						</div>
 						<div class="volunteer position" style="display: none;">
-							
+							志愿者招聘
 						</div>
 					</div>
 				</div>
@@ -131,18 +131,12 @@
 
 			function events() {
 
-				$('.toCenter').click(function() {
-					location.href = 'center.html';
-				})
 				$('.aboutWrap .til span').on('click',function(){
 					$(this).addClass('cur').siblings().removeClass('cur');
 					$('.aboutDetail>div').eq($(this).index()).show().siblings().hide();
 					if($(this).index() == 2){
 						baidumap();
 					}
-				})
-				$('.openInfo .left p').click(function(){
-					$(this).addClass('cur').siblings().removeClass('cur');
 				})
 			}
 		})

@@ -47,19 +47,6 @@
 
 			function events() {
 
-				$('.toCenter').click(function() {
-					location.href = 'center.html';
-				})
-				$('.aboutWrap .til span').on('click',function(){
-					$(this).addClass('cur').siblings().removeClass('cur');
-					$('.aboutDetail>div').eq($(this).index()).show().siblings().hide();
-					if($(this).index() == 2){
-						baidumap();
-					}
-				})
-				$('.openInfo .left p').click(function(){
-					$(this).addClass('cur').siblings().removeClass('cur');
-				})
 			}
 		})
 	</script>

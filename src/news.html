@@ -28,6 +28,16 @@
 					<p class="detail">　　现场还通过关注“体彩安徽”公众号参与抽奖活动的形式发放了大乐透玩法代金券，开展拉新活动，受到市民朋友的喜爱和关注，增强了对中国体育彩票品牌玩法的体验感。</p>
 					<p class="detail">　　为了扩大活动的影响力，让更多的力量汇聚到社会公益事业中来，安徽省体彩中心还邀请了安徽广播电视台“第一体育”“万家热线”等网络媒体对现场活动进行了现场直播。（转自8月28日《中国体育报》08版）</p>
 				</div>
+				<div class="newsRight">
+					<div class="aboutLing">
+						<p>在20岁做一件80岁<br />都会开心的事</p>
+						<div class="btn">关于我们</div>
+					</div>
+					<div class="code">
+						<img src="res/img/static/ewm.jpg"/>
+						<p>关注公众号</p>
+					</div>
+				</div>
 			</div>
 			<include src="html/footer.html"></include>
 		</div>
@@ -46,19 +56,6 @@
 
 			function events() {
 
-				$('.toCenter').click(function() {
-					location.href = 'center.html';
-				})
-				$('.aboutWrap .til span').on('click', function() {
-					$(this).addClass('cur').siblings().removeClass('cur');
-					$('.aboutDetail>div').eq($(this).index()).show().siblings().hide();
-					if($(this).index() == 2) {
-						baidumap();
-					}
-				})
-				$('.openInfo .left p').click(function() {
-					$(this).addClass('cur').siblings().removeClass('cur');
-				})
 			}
 		})
 	</script>

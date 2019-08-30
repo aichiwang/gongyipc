@@ -433,6 +433,9 @@ form{
             span:last-child{
                 float: right;
             }
+            a{
+                color: #a6a6a6;
+            }
         }
     }
     .regist{
@@ -440,7 +443,7 @@ form{
         top: 120px;
         right: 355px;
         width: 510px;
-        height: 600px;
+        height: 400px;
         border-radius: 5px;
         background: #fff;
         text-align: center;
@@ -473,6 +476,7 @@ form{
             color: #F97B26;
             background: #fff;
             margin: 0 auto;
+            margin-top: 50px;
         }
         .teamRegist{
             a{

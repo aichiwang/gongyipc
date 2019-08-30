@@ -84,6 +84,13 @@ input::-webkit-input-placeholder{
                     float: left;
                     width: 830px;
                     margin-left: 50px;
+                    .rightItem{
+                        display: none;
+                        overflow: hidden;
+                    }
+                    .rightItem:first-child{
+                        display: block;
+                    }
                     .item{
                         float: left;
                         margin-right: 50px;

@@ -43,26 +43,30 @@
 								<p>表彰信息</p>
 							</div>
 							<div class="right">
-								<div class="item">
-									<img src="res/img/static/1.jpg" />
-									<p>扶贫助学—山村之旅</p>
+								<div class="rightItem">
+									<div class="item">
+										<img src="res/img/static/1.jpg" />
+										<p>扶贫助学—山村之旅</p>
+									</div>
+									<div class="item">
+										<img src="res/img/static/1.jpg" />
+										<p>扶贫助学—山村之旅</p>
+									</div>
+									<div class="item">
+										<img src="res/img/static/1.jpg" />
+										<p>扶贫助学—山村之旅</p>
+									</div>
+									<div class="item">
+										<img src="res/img/static/1.jpg" />
+										<p>扶贫助学—山村之旅</p>
+									</div>
+									<div class="item">
+										<img src="res/img/static/1.jpg" />
+										<p>扶贫助学—山村之旅</p>
+									</div>
 								</div>
-								<div class="item">
-									<img src="res/img/static/1.jpg" />
-									<p>扶贫助学—山村之旅</p>
-								</div>
-								<div class="item">
-									<img src="res/img/static/1.jpg" />
-									<p>扶贫助学—山村之旅</p>
-								</div>
-								<div class="item">
-									<img src="res/img/static/1.jpg" />
-									<p>扶贫助学—山村之旅</p>
-								</div>
-								<div class="item">
-									<img src="res/img/static/1.jpg" />
-									<p>扶贫助学—山村之旅</p>
-								</div>
+								<div class="rightItem">善行100项目报告</div>
+								<div class="rightItem">表彰信息</div>
 							</div>
 						</div>
 						<div class="connectUs" style="display: none;">
@@ -113,9 +117,6 @@
 
 			function events() {
 
-				$('.toCenter').click(function() {
-					location.href = 'center.html';
-				})
 				$('.aboutWrap .til span').on('click',function(){
 					$(this).addClass('cur').siblings().removeClass('cur');
 					$('.aboutDetail>div').eq($(this).index()).show().siblings().hide();
@@ -125,6 +126,7 @@
 				})
 				$('.openInfo .left p').click(function(){
 					$(this).addClass('cur').siblings().removeClass('cur');
+					$('.rightItem').eq($(this).index()).show().siblings().hide();
 				})
 			}
 		})
