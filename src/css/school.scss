@@ -38,13 +38,19 @@ input::-webkit-input-placeholder{
                     margin-top: 40px;
                 }
                 .list{
+                    padding: 0 20px;
+                    border-bottom: 1px solid #e6e6e6;
                     >p{
                         padding-left: 20px;
                         font-size: 14px;
                         span{
                             display: inline-block;
-                            width: 170px;
+                            width: 150px;
                             line-height: 57px;
+                            img{
+                                vertical-align: sub;
+                                margin-right: 5px;
+                            }
                         }
                         span:last-child{
                             width: 100px;
@@ -52,6 +58,7 @@ input::-webkit-input-placeholder{
                         }
                     }
                     .title{
+                        border-bottom: 1px solid #e6e6e6;
                         font-weight: bold;
                     }
                 }
