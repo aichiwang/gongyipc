@@ -37,22 +37,22 @@
 				<div class="dataWrap">
 					<ul class="number">
 						<li>
-							<p class="nub-top"><span>213</span><i class="suo">所</i></p>
+							<p class="nub-top"><span class="val" data-val="213">200</span><i class="suo">所</i></p>
 							<p class="nub-bottom"><img src="res/img/static/indexIcon1.jpg" />高校数量</p>
 							<img class="xiegang" src="res/img/static/xiegang-L.jpg" />
 						</li>
 						<li>
-							<p class="nub-top"><span>265245</span><i class="suo">名</i></p>
+							<p class="nub-top"><span class="val" data-val="265245">265145</span><i class="suo">名</i></p>
 							<p class="nub-bottom"><img src="res/img/static/indexIcon2.jpg" />志愿者</p>
 							<img class="xiegang" src="res/img/static/xiegang-L.jpg" />
 						</li>
 						<li>
-							<p class="nub-top"><span>613</span><i class="suo">时</i></p>
+							<p class="nub-top"><span class="val" data-val="613">603</span><i class="suo">时</i></p>
 							<p class="nub-bottom"><img src="res/img/static/indexIcon3.jpg" />服务时长</p>
 							<img class="xiegang" src="res/img/static/xiegang-L.jpg" />
 						</li>
 						<li>
-							<p class="nub-top"><span>654122</span><i class="suo">元</i></p>
+							<p class="nub-top"><span class="val" data-val="654122">654022</span><i class="suo">元</i></p>
 							<p class="nub-bottom"><img src="res/img/static/indexIcon4.jpg" />筹款金额</p>
 						</li>
 					</ul>
@@ -521,9 +521,33 @@
 				if(getQueryString('type') == 'login'){
 					$('.cover').show().find('.login').show().siblings('.regist').hide();
 				}
+				fontScroll();
 				events();
 			}
-
+			
+			
+			function fontScroll(){
+				var valEle1 = $('.number .val').eq(0);
+				var valEle2 = $('.number .val').eq(1);
+				var valEle3 = $('.number .val').eq(2);
+				var valEle4 = $('.number .val').eq(3);
+				scrollTimer(valEle1 )
+				scrollTimer(valEle2 )
+				scrollTimer(valEle3 )
+				scrollTimer(valEle4 )
+				
+			}
+			function scrollTimer(ele){
+				if(ele.html()>=ele.data('val')){
+					return
+				}else{
+					ele.html(ele.html()-0+1)
+					setTimeout(function(){
+						scrollTimer(ele)
+					},5)
+				}
+			}
+			
 			function events() {
 
 				$('.rank .tab a').click(function() {console.log($(this).index())
