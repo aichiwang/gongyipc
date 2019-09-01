@@ -165,7 +165,7 @@ body {
         }
         .rank {
             width: 1200px;
-            margin: 100px auto 0;
+            margin: 60px auto 0;
             >li {
                 float: left;
                 width: 48%;
@@ -193,7 +193,7 @@ body {
             }
         }
         .rank-content {
-            margin: 45px 20px 20px;
+            margin: 10px 20px 20px;
             box-shadow: 0 0 0.5rem #ddd;
             overflow: hidden;
         }
@@ -289,6 +289,22 @@ body {
             }
             .school{
                 padding-top: 7px;
+            }
+            .swiper-button-prev{
+                background: url(../img/static/swiperLeft2.png);
+                background-size: contain;
+            }
+            .swiper-button-prev:hover{
+                background: url(../img/static/swiperLeft2-h.png);
+                background-size: contain;
+            }
+            .swiper-button-next{
+                background: url(../img/static/swiperRight2.png);
+                background-size: contain;
+            }
+            .swiper-button-next:hover{
+                background: url(../img/static/swiperRight2-h.png);
+                background-size: cover;
             }
         }
         .star-title {
@@ -446,7 +462,7 @@ body {
         }
         .join {
             width: 1200px;
-            margin: 110px auto 0;
+            margin: 40px auto 0;
             overflow: hidden;
             li {
                 width: 50%;

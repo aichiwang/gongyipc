@@ -14,6 +14,24 @@
 		<div class="wrap">
 			<include src="html/header.html"></include>
 			<div class="content">
+				<div class="liveScore">
+					<h5>实时捐赠</h5>
+					<p data-ind=0>
+						<span>· 李佩奇 <i> 捐赠 </i> 200元人民币</span><br />
+						<span>· 李佩奇 <i> 捐赠 </i> 200元人民币</span><br />
+						<span>· 李佩奇 <i> 捐赠 </i> 200元人民币</span><br />
+					</p>
+					<p data-ind=0>
+						<span>· 李佩奇 <i> 捐赠 </i> 200元人民币</span><br />
+						<span>· 李佩奇 <i> 捐赠 </i> 200元人民币</span><br />
+						<span>· 李佩奇 <i> 捐赠 </i> 200元人民币</span><br />
+					</p>
+					<p data-ind=0>
+						<span>· 李佩奇 <i> 捐赠 </i> 200元人民币</span><br />
+						<span>· 李佩奇 <i> 捐赠 </i> 200元人民币</span><br />
+						<span>· 李佩奇 <i> 捐赠 </i> 200元人民币</span><br />
+					</p>
+				</div>
 				<div class="search">
 					<div class="donation">
 						<p>捐赠查询</p>
@@ -58,12 +76,6 @@
 					</div>
 					<div class="right"></div>
 				</div>
-				<div class="liveScore">
-					<h5>实时捐赠</h5>
-					<p>· 李佩奇 <i> 捐赠 </i> 200元人民币</p>
-					<p>· 李佩奇 <i> 捐赠 </i> 200元人民币</p>
-					<p>· 李佩奇 <i> 捐赠 </i> 200元人民币</p>
-				</div>
 			</div>
 			<include src="html/footer.html"></include>
 		</div>
@@ -79,10 +91,30 @@
 
 			function Init() {
 				events();
+				setTimeout(function(){
+					scoreScroll($('.liveScore p').eq(0))
+				},0)
+				setTimeout(function(){
+					scoreScroll($('.liveScore p').eq(1))
+				},300)
+				setTimeout(function(){
+					scoreScroll($('.liveScore p').eq(2))
+				},500)
+			}
+			
+			function scoreScroll(ele){
+				if(ele.data('ind')>=ele.find('span').length){
+					ele.data('ind',0)
+				}
+				ele.animate({marginTop:-95*ele.data('ind')+'px'});
+				ele.data('ind',ele.data('ind')-0+1)
+				setTimeout(function(){
+					scoreScroll(ele)
+				},2000)
 			}
 
 			function events() {
-
+				
 			}
 		})
 	</script>

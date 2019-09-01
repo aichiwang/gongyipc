@@ -22,8 +22,9 @@ input::-webkit-input-placeholder{
         box-shadow: 0 0 25px #ddd;
         min-height: 750px;
         font-size: 18px;
+        padding-top: 35px;
         .search{
-            padding: 60px 50px 0;
+            padding: 30px 50px 0;
             overflow: hidden;
             .donation,.certificate{
                 float: left;
@@ -122,6 +123,7 @@ input::-webkit-input-placeholder{
             box-shadow: 0 0 25px #ddd;
             line-height: 95px;
             background: url(../img/static/xiegang.jpg) no-repeat 130px ;
+            overflow: hidden;
             h5{
                 float: left;
                 font-size: 26px;
